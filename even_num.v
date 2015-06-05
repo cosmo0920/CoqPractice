@@ -29,3 +29,12 @@ Proof.
   simpl.
   auto.
 Qed.
+
+Theorem sum_even :
+  forall n p:nat, even n -> even p -> even (n+p).
+Proof.
+  intros n p H0 H1.
+  apply even_even_plus.
+  trivial.
+  auto.
+Qed.
