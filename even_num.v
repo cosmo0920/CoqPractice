@@ -38,3 +38,13 @@ Proof.
   trivial.
   auto.
 Qed.
+
+Hint Resolve sum_even.
+
+Theorem square_even :
+  forall n:nat, even n -> even (n*n).
+Proof.
+  intros.
+  apply even_mult_l.
+  trivial.
+Qed.
